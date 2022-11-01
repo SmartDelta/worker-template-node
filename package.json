@@ -1,5 +1,5 @@
 {
-  "name": "Worker",
+  "name": "worker-template-node",
   "version": "1.0.0",
   "description": "A worker example for node js.",
   "main": "index.js",
