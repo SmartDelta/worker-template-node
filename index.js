@@ -10,6 +10,13 @@ class Worker {
     client = null; // The socket io client
 
     constructor(config) {
+        if (!config) {
+            const message = 'The worker class requires a configuration!';
+            console.error(message)
+            console.info('A basic example of a configuration file can be found in this package!')
+            throw new Error(message);
+        }
+
         this.config = config;
         this.client = io.connect(this.config.hub_address);
 
@@ -55,6 +62,13 @@ class Worker {
     on(event, callback) {
         return this.client.on(event, callback());
     }
+
+    getCleanerStack() {
+        var err = new Error();
+        Error.captureStackTrace(err, this.getCleanerStack);
+         
+        return err.stack;
+     }
 }
 
 module.exports = Worker
