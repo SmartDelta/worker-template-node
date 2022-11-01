@@ -1,0 +1,171 @@
+{
+  "hub_address": "http://localhost:3000",
+  "id": "image1",
+  "display_name": "Image worker",
+  "type": "worker",
+  "vendor": "Smart Delta",
+  "group": "Alpha",
+  "version": {
+    "version": "1.0.0",
+    "date": "12-12-2012",
+    "message": "Make worker work",
+    "branch": "feature/working-worker",
+    "tag": "v1.0.0",
+    "hash": "12h3g12u34gb1u2hb3h12n3j"
+  },
+  "actions": [
+    {
+      "event": "log_me",
+      "name": "Print",
+      "description": "Prints a message to the console"
+    }
+  ],
+  "settings": [
+    {
+      "display_name": "Sample setting",
+      "name": "setting",
+      "properties": {
+        "read_only": "true",
+        "value": "Varied setting for cam 1"
+      },
+      "tab_name": ""
+    },
+    {
+      "display_name": "GAIN",
+      "name": "gain",
+      "properties": {
+        "value": "5",
+        "params": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      }
+    },
+    {
+      "display_name": "Exposure Mode",
+      "name": "exposure_mode",
+      "properties": {
+        "value": "5",
+        "params": [
+          "From Triggerbox",
+          "From lightsensor"
+        ]
+      }
+    },
+    {
+      "display_name": "ISO",
+      "name": "iso",
+      "properties": {
+        "value": "800",
+        "params": [
+          "600",
+          "800",
+          "1200",
+          "1400",
+          "1600"
+        ]
+      }
+    },
+    {
+      "display_name": "Enabled",
+      "name": "enabled",
+      "properties": {
+        "value": "true"
+      }
+    },
+    {
+      "display_name": "String number type",
+      "idle_change_only": true,
+      "name": "string_number_type",
+      "prevent_caching": true,
+      "properties": {
+            "max": "2400",
+            "min": "0",
+            "step": "10",
+            "value": "0"
+      }
+    },
+
+    {
+      "display_name": "Int number type",
+      "idle_change_only": true,
+      "name": "int_number_type",
+      "prevent_caching": true,
+      "properties": {
+            "max": "2400",
+            "min": "0",
+            "step": "10",
+            "value": "1"
+      }
+    },
+    {
+      "display_name": "Lever arm Offset Type",
+      "name": "correction_type",
+      "properties": {
+        "value": "SmartPano",
+        "read_only": "true"
+      }
+    },
+    {
+      "display_name": "Lever arm Offset X",
+      "name": "correction_x",
+      "properties": {
+        "value": "0"
+      }
+    },
+    {
+      "display_name": "Lever arm Offset Y",
+      "name": "correction_y",
+      "properties": {
+        "value": "0.2"
+      }
+    },
+    {
+      "display_name": "Lever arm Offset Z",
+      "name": "correction_z",
+      "properties": {
+        "value": "0"
+      }
+    }
+  ],
+  "sub_devices": [
+    {
+      "id": "sub1",
+      "display_name": "(SUB) Image device",
+      "settings": [
+        {
+          "display_name": "Lever arm Offset Type",
+          "name": "correction_type",
+          "properties": {
+            "value": "SmartPano",
+            "read_only": "true"
+          }
+        },
+        {
+          "display_name": "Lever arm Offset X",
+          "name": "correction_x",
+          "properties": {
+            "value": "0"
+          }
+        },
+        {
+          "display_name": "Lever arm Offset Y",
+          "name": "correction_y",
+          "properties": {
+            "value": "0.2"
+          }
+        },
+        {
+          "display_name": "Lever arm Offset Z",
+          "name": "correction_z",
+          "properties": {
+            "value": "0"
+          }
+        }
+      ]
+    }
+  ]
+}
