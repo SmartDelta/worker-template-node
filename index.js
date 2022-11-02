@@ -41,11 +41,13 @@ class Worker {
     /**
      * Sends a preview to the HUB.
      *
-     * @param {[unknown]} packet Packet can contain anything. 
+     * @param {[unknown]} buffer Buffer can contain anything. 
      * With JPEGs this would be binary data.
      */
-    sendPreview(packet) {        
-        this.client.emit('worker_push_preview', packet);
+    sendPreview(buffer) {        
+        this.client.emit('worker_push_preview', {
+            buffer
+        });
     }
 
     /**
@@ -57,18 +59,12 @@ class Worker {
     }
 
     /**
-     * @return  {[type]}  [return description]
+     * Exposes the on handle for the socket io client
+     * @return  {[type]} 
      */
     on(event, callback) {
         return this.client.on(event, callback());
     }
-
-    getCleanerStack() {
-        var err = new Error();
-        Error.captureStackTrace(err, this.getCleanerStack);
-         
-        return err.stack;
-     }
 }
 
 module.exports = Worker
