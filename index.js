@@ -63,7 +63,7 @@ class Worker {
      * @return  {[type]} 
      */
     on(event, callback) {
-        return this.client.on(event, callback());
+        return this.client.on(event, callback);
     }
 }
 

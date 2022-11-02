@@ -33,4 +33,6 @@ setInterval(async () => {
   }
 
   worker.sendTelemetry(telemetry);
-})
+}, 500)
+
+worker.on('worker_receive_setting', (...args) => console.log(args))
